@@ -1,3 +1,4 @@
+// slider
 let sliderMain = document.getElementById('sliderContent');
 let rBtn = document.getElementById('rightBtn');
 let lBtn = document.getElementById('leftBtn');
