@@ -25,3 +25,21 @@
     color: white;
     text-shadow: 2px 2px 2px grey;
 }
+.balls-parent {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+.balls {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(177, 177, 177);
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.active {
+    background-color: white;
+}

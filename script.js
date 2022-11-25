@@ -40,13 +40,37 @@ function createTitle(item) {
     return title;
 }
 
+function createBalls() {
+    let ballsParent = document.createElement('div');
+    ballsParent.classList.add('balls-parent');
+    imgSlide.forEach((item) =>  {
+        let balls = document.createElement('div');
+        balls.classList.add('balls');
+        let ballsId = item.id;
+        if (ballsId == index + 1) {
+            balls.classList.add('active');
+        }
+        else {
+            balls.classList.remove('active');
+        }
+        ballsParent.appendChild(balls);
+        function ballsNav () {
+            index = ballsId - 1;
+            slider();
+        }
+        balls.addEventListener('click', ballsNav);
+    });
+    return ballsParent;
+}
 function slider() {
     sliderMain.innerHTML = " ";
     let slideIndex = createDiv(imgSlide[index]);
     let slideImg = createImg(imgSlide[index]);
     let slideTitle = createTitle(imgSlide[index]);
+    let slideBalls = createBalls(imgSlide[index]);
     slideIndex.appendChild(slideImg);
     slideIndex.appendChild(slideTitle);
+    slideIndex.appendChild(slideBalls);
     sliderMain.appendChild(slideIndex);
 }
 
@@ -71,6 +95,7 @@ function leftClick() {
     index--;
     slider();
 }
+
 
 rBtn.addEventListener('click', rightClick);
 lBtn.addEventListener('click', leftClick);
