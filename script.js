@@ -99,3 +99,6 @@ function leftClick() {
 
 rBtn.addEventListener('click', rightClick);
 lBtn.addEventListener('click', leftClick);
+setInterval(() => {
+    rightClick();
+}, 2500);
