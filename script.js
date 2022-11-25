@@ -34,10 +34,13 @@ function createImg(item) {
 }
 
 function createTitle(item) {
+    let titleDiv = document.createElement('div');
+    titleDiv.classList.add('subtitle-div')
     let title = document.createElement('h2');
     title.textContent = item.title;
     title.classList.add('subtitle');
-    return title;
+    titleDiv.appendChild(title);
+    return titleDiv;
 }
 
 function createBalls() {
