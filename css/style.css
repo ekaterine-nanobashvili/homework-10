@@ -45,7 +45,7 @@
 }
 .subtitle {
     text-align: center;
-    color: brown;
+    color: #c37960;
     font-size: 30px;
     font-family:monospace;
     font-weight: 600;
@@ -54,5 +54,33 @@
     margin-top: 20px;
 }
 body {
-    background-color: rgb(189, 187, 187);
+    background-color:#eee1ba;
+}
+.signup-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(109, 109, 109);
+}
+.form-wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+#signup {
+    vertical-align: middle;
+}
+.field {
+    margin: 10px 0 10px 0;
+}
+.error-text {
+    display: block;
+    color: rgb(158, 20, 20);
+    margin-bottom: 8px;
+    margin-top: 2px;
+}
+#checkbox {
+    display: inline-block;
+    vertical-align: middle;
+}
+label {
+    color: rgb(109, 109, 109);
 }

@@ -105,7 +105,7 @@ rBtn.addEventListener('click', rightClick);
 lBtn.addEventListener('click', leftClick);
 setInterval(() => {
     rightClick();
-}, 2500);
+}, 4000);
 
 // signup form
 
@@ -127,7 +127,6 @@ form.addEventListener('submit', function(event) {
         // აქ რატომღაც უფრო მოკლე ჩანაწერი (!checkbox) არ ამუშავდა
         errors.check = "you must agree to our terms and conditions";
     }
-    console.log(errors);
     document.querySelectorAll(".error-text").forEach((element) => {
         element.innerText = " ";
     });
