@@ -32,9 +32,20 @@
         <form action="" method="post" id="signup">
           <label for="name">Input your name:</label>
           <div>
-            <input type="text" id="name" id="nameField" />
+            <input type="text" name="name" id="nameField" />
             <span class="error-text" id="error_name"></span>
           </div>
+          <label for="email">Input your email adress:</label>
+          <div>
+            <input type="email" name="email" id="emailField" />
+            <span class="error-text" id="error_email"></span>
+          </div>
+          <label for="checkbox">Accept our terms and conditions</label>
+          <div>
+            <input type="checkbox" name="checkbox" id="checkbox" />
+            <span class="error-text" id="error_check"></span>
+          </div>
+            <button type="submit">Sign up</button>
         </form>
       </div>
     </section>

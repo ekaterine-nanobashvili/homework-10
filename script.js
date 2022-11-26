@@ -106,3 +106,38 @@ lBtn.addEventListener('click', leftClick);
 setInterval(() => {
     rightClick();
 }, 2500);
+
+// signup form
+
+let form = document.getElementById('signup');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    let errors = {};
+    let userName = document.getElementById('nameField').value;
+    if (userName.length == 0 || userName.match(/^[0-9]+$/) != null) {
+        errors.name = "username can't be empty or contain only numbers";
+    }
+    let email = document.getElementById('emailField').value;
+    if (email.length == 0) {
+        errors.email = "valid email is required";
+    }
+    let checkbox = document.getElementById('checkbox');
+    if (checkbox != true) {
+        // აქ რატომღაც უფრო მოკლე ჩანაწერი (!checkbox) არ ამუშავდა
+        errors.check = "you must agree to our terms and conditions";
+    }
+    console.log(errors);
+    document.querySelectorAll(".error-text").forEach((element) => {
+        element.innerText = " ";
+    });
+    for (let key in errors) {
+        let errorText = document.getElementById('error_' + key);
+        if (errorText) {
+            errorText.innerText = errors[key];
+        }
+    }
+    if (Object.keys(errors) == 0) {
+        form.submit();
+    }
+})
