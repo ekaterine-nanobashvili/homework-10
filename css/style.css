@@ -47,7 +47,7 @@
     text-align: center;
     color: #c37960;
     font-size: 30px;
-    font-family:monospace;
+    font-family: 'Montserrat', monospace;
     font-weight: 600;
 }
 .subtitle-div {
@@ -60,6 +60,8 @@ body {
     text-align: center;
     margin-bottom: 30px;
     color: rgb(109, 109, 109);
+    font-family: 'Bree Serif', monospace;
+    font-size: 15px;
 }
 .form-wrapper {
     margin-top: 40px;
@@ -76,6 +78,8 @@ body {
     color: rgb(158, 20, 20);
     margin-bottom: 8px;
     margin-top: 2px;
+    font-family: 'Libre Baskerville', monospace;
+    font-size: 12px;
 }
 #checkbox {
     display: inline-block;
@@ -83,4 +87,6 @@ body {
 }
 label {
     color: rgb(109, 109, 109);
+    font-family: 'Libre Baskerville', monospace;
+    font-size: 15px;
 }
